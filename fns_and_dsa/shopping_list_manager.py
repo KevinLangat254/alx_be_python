@@ -18,7 +18,7 @@ def main():
             
         elif choice == '2':
             # Prompt for and remove an item
-            remove_item=input('Enter the item you want it to be removed: ')
+            remove_item=input('Enter the item to add: ')
             if remove_item not in shopping_list:
                 print("Item not found!")
             elif remove_item in shopping_list:    
