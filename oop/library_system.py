@@ -27,4 +27,10 @@ class Library:
             raise TypeError("Only instances of Book or its sublclasses can be added.")
     def list_books(self):
         for book in self.books:
-            print(f"{book.title} by {book.author}")                                
+            if isinstance(book, EBook):
+               print(f"{book.title} by {book.author}, File Size: {book.file_size}KB")
+            elif isinstance(book, PrintBook):
+               print(f"{book.title} by {book.author}, Page Count: {book.page_count}") 
+            else:
+               print(f"{book.title} by {book.author}")     
+                                               
